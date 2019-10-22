@@ -3,4 +3,4 @@
 /.vscode/*
 /venv/
 **/__pycache__/
-/grpc_service/grpc_example/
+/grpc_service/grpc_example
