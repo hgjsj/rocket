@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package student;
+
+// The greeting service definition.
+service StutdentsService {
+  // Sends a greeting
+  rpc GetStudentInfo (StudentRequest) returns (StudentInfo) {}
+
+  rpc GetStudentList (EmptyRequest) returns (stream StudentInfo) {}
+
+  rpc GetStudentsByArray (EmptyRequest) returns (Studentlist) {}
+  
+  rpc GetSpecifyStudents (stream StudentFilter) returns (stream StudentInfo) {}
+
+}
+
+message EmptyRequest {
+
+}
+// The request message containing the user's name.
+message StudentRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message StudentInfo {
+  string name = 1;
+  int32 age = 2;
+  string phone = 3;
+}
+
+message Studentlist {
+  int32 count = 1;
+  repeated StudentInfo members = 2;
+}
+message StudentFilter {
+  string key = 1;
+  string value = 2;
+}

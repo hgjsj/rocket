@@ -1,0 +1,17 @@
+[
+    {
+        "name": "sutton",
+        "age": 38,
+        "phone": "12345678"
+    },
+    {
+        "name": "vanessa",
+        "age": 36,
+        "phone": "12345678"
+    },
+    {
+        "name": "steven",
+        "age": 8,
+        "phone": "12345678"
+    }
+]

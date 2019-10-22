@@ -1,0 +1,6 @@
+# Byte-compiled / optimized / DLL files
+/.idea/*
+/.vscode/*
+/venv/
+__pycache__/*
+/grpc_service/grpc_example/*
