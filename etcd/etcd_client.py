@@ -40,7 +40,7 @@ if __name__ == '__main__':
     log(datetime.datetime.now())
     a = print_line1(print_line2(log1))
     a(datetime.datetime.now())
-    #etcd = etcd3.client(host='192.168.30.144', port=2379, ca_cert="etcd/ca.pem", cert_cert="etcd/client.pem",cert_key='etcd/client-key.pem')
+    etcd = etcd3.client(host='192.168.30.144', port=2379, ca_cert="etcd/ca.pem", cert_cert="etcd/client.pem",cert_key='etcd/client-key.pem')
 
     #with etcd.lock('/key') as locker:
     #    print(etcd.get('/key'))
