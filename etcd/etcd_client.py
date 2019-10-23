@@ -37,6 +37,7 @@ def log1(text):
     print ("now is %s" % text)
 
 if __name__ == '__main__':
+    #etcd = etcd3.client(host='192.168.30.144', port=2379, ca_cert="etcd/ca.pem", cert_cert="etcd/client.pem",cert_key='etcd/client-key.pem')
     log(datetime.datetime.now())
     a = print_line1(print_line2(log1))
     a(datetime.datetime.now())
