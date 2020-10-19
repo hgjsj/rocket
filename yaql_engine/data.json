@@ -1,0 +1,621 @@
+{
+    "subscription_owner_id": "e4suser3@hpe.com",
+    "eu_data_privacy_support": false,
+    "datacenter_name": "PDC03-N1",
+    "order_tracking_id": "95e1bbf7-96cc-423d-9846-08716d8d7d00",
+    "workload_type_id": "3ebad09b-bba2-41dc-87f7-0b9cd83af90b",
+    "sm_instance_hosts": {
+    "z2_list": {
+        "hana_list": [],
+        "non_hana_list": []
+    },
+    "z1_list": {
+        "hana_list": [],
+        "non_hana_list": [
+        {
+            "machine_type": "virtual",
+            "vmware_dc": "E4S-AMS-PDC03-N1-Z1",
+            "ram": 32,
+            "prod_vlan_id": "2427",
+            "network_prod_gateway": "30.81.131.1",
+            "cluster_id": "2221fe23-6fe3-4e04-a6f3-f0900db7b33f",
+            "goe_osversion": "rhel0700s-8664-latest-SAP",
+            "network_internal_dns": "192.85.168.73",
+            "id": "a3e55163-9992-46e7-b934-a3e28b66859b",
+            "network_hsr_subnet": null,
+            "network_prod_ip": "30.81.131.34",
+            "network_hsr_ip": null,
+            "cpu_socket": 2,
+            "hostname": "cqaxms4gdb",
+            "domain_name": "8144.1447.n1ecs.hp.com",
+            "cluster_name": "E4S-PRD-T70-3-Z1",
+            "network_internal_subnet": "255.255.255.0",
+            "network_name_hsr": null,
+            "network_prod_subnet": "255.255.255.0",
+            "network_name_internal": "ClientVlan-1627",
+            "hsr_vlan_id": null,
+            "encryption_state": "70721a57-4811-46a2-879e-12f555b80dc6",
+            "second_volumes": {
+            "data": {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=DATA;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "second_database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4gdata2",
+                "volume_name": "N1TRLNrvc9xYwxZeUW3nQFNQZmMc",
+                "type": "data",
+                "id": "c10b745f-d35a-4ef8-9470-efa792c63936"
+            },
+            "app": null,
+            "arch": {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=ARCHIVE;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "second_database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4garchive2",
+                "volume_name": "N1TRLNmzwPTuNcGqkPVxCmhTcbib",
+                "type": "archive",
+                "id": "bd7a4f0f-ec25-4425-bf39-4de634ccc71d"
+            },
+            "log": {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=LOG;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "second_database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4glog2",
+                "volume_name": "N1TRLNWtYWRocsd9uprRk6dQbBS7",
+                "type": "log",
+                "id": "1e7c458d-2562-4c32-b9b1-c5a26c2deb1f"
+            }
+            },
+            "network_name_prod": "ClientVlan-2427",
+            "all_app_volumes": {
+            "app": [
+                {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=APPLICATION;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "sap_solution_manager",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 40960,
+                "vg_name": "xms4gdbapp",
+                "volume_name": "N1TRLNMvktavt42TtkqqBCtNd48R",
+                "type": "application",
+                "id": "81ddef03-f3dd-4e03-b099-8691e182b431"
+                }
+            ],
+            "s4hana_app": []
+            },
+            "services": [
+            {
+                "instance_hosts": [
+                "a3e55163-9992-46e7-b934-a3e28b66859b"
+                ],
+                "role": "database",
+                "id": "7302c513-1b59-4482-afa3-dd1d1818fc11"
+            },
+            {
+                "instance_hosts": [
+                "a3e55163-9992-46e7-b934-a3e28b66859b"
+                ],
+                "role": "second_database",
+                "id": "7a0706b2-8803-4b05-9b13-846d03f34206"
+            },
+            {
+                "instance_hosts": [
+                "a3e55163-9992-46e7-b934-a3e28b66859b"
+                ],
+                "role": "sap_solution_manager",
+                "id": "9ff22c4c-48a7-463e-8239-a0b4ff79593b"
+            }
+            ],
+            "network_hsr_gateway": null,
+            "network_internal_gateway": "30.80.133.1",
+            "template_name": "5757989c-b774-4e85-97af-8d2a7e9d669c",
+            "network_internal_ip": "30.80.133.37",
+            "first_volumes": {
+            "data": {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=DATA;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4gdata1",
+                "volume_name": "N1TRLNKxJfcyHajYktjK6YpQe4T5",
+                "type": "data",
+                "id": "1354c216-154b-4343-8f77-ad220c99df69"
+            },
+            "app": {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=APPLICATION;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "sap_solution_manager",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 40960,
+                "vg_name": "xms4gdbapp",
+                "volume_name": "N1TRLNMvktavt42TtkqqBCtNd48R",
+                "type": "application",
+                "id": "81ddef03-f3dd-4e03-b099-8691e182b431"
+            },
+            "arch": {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=ARCHIVE;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4garchive1",
+                "volume_name": "N1TRLN2wEb2oEGhtjCSPkyhemfCa",
+                "type": "archive",
+                "id": "b4e80718-8dcb-4ed6-b14d-b69f0d89f6a8"
+            },
+            "log": {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=LOG;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4glog",
+                "volume_name": "N1TRLNzP7SKPA2jvutoEf4EaUoLS",
+                "type": "log",
+                "id": "88bea95d-7c4c-4a93-877b-36108ab6403f"
+            }
+            },
+            "zone": "z1",
+            "network_prod_dns": "192.85.168.73",
+            "migration_state": "92378ab2-9acc-4c29-98ac-c35593086f3e",
+            "internal_vlan_id": "1627",
+            "glance_id": "",
+            "volumes": [
+            {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=ARCHIVE;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4garchive1",
+                "volume_name": "N1TRLN2wEb2oEGhtjCSPkyhemfCa",
+                "type": "archive",
+                "id": "b4e80718-8dcb-4ed6-b14d-b69f0d89f6a8"
+            },
+            {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=ARCHIVE;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "second_database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4garchive2",
+                "volume_name": "N1TRLNmzwPTuNcGqkPVxCmhTcbib",
+                "type": "archive",
+                "id": "bd7a4f0f-ec25-4425-bf39-4de634ccc71d"
+            },
+            {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=DATA;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4gdata1",
+                "volume_name": "N1TRLNKxJfcyHajYktjK6YpQe4T5",
+                "type": "data",
+                "id": "1354c216-154b-4343-8f77-ad220c99df69"
+            },
+            {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=DATA;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "second_database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4gdata2",
+                "volume_name": "N1TRLNrvc9xYwxZeUW3nQFNQZmMc",
+                "type": "data",
+                "id": "c10b745f-d35a-4ef8-9470-efa792c63936"
+            },
+            {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=LOG;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4glog",
+                "volume_name": "N1TRLNzP7SKPA2jvutoEf4EaUoLS",
+                "type": "log",
+                "id": "88bea95d-7c4c-4a93-877b-36108ab6403f"
+            },
+            {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=LOG;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "second_database",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 1024,
+                "vg_name": "xms4glog2",
+                "volume_name": "N1TRLNWtYWRocsd9uprRk6dQbBS7",
+                "type": "log",
+                "id": "1e7c458d-2562-4c32-b9b1-c5a26c2deb1f"
+            },
+            {
+                "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=APPLICATION;HA=N;DR=N",
+                "volume_set": "UHP_E4S",
+                "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+                "vg_service_role": "sap_solution_manager",
+                "snap_cpg": "CPG_SSD_E4S",
+                "volume_type": "uhp",
+                "cpg": "CPG_SSD_E4S",
+                "volume_size": 40960,
+                "vg_name": "xms4gdbapp",
+                "volume_name": "N1TRLNMvktavt42TtkqqBCtNd48R",
+                "type": "application",
+                "id": "81ddef03-f3dd-4e03-b099-8691e182b431"
+            }
+            ],
+            "datastore_id": "23f0cd1b-3b1b-42b8-b097-e85f952b59e0",
+            "os_type": "linux",
+            "cpu": 4,
+            "datastore_name": "PRD-T70-3P1-Z1"
+        }
+        ]
+    }
+    },
+    "dbtype": "oracle",
+    "storage_company_code": "N1T",
+    "has_hana": false,
+    "order_id": "POR000000075258",
+    "instance_hosts": [
+    {
+        "machine_type": "virtual",
+        "vmware_dc": "E4S-AMS-PDC03-N1-Z1",
+        "ram": 32,
+        "prod_vlan_id": "2427",
+        "network_prod_gateway": "30.81.131.1",
+        "cluster_id": "2221fe23-6fe3-4e04-a6f3-f0900db7b33f",
+        "goe_osversion": "rhel0700s-8664-latest-SAP",
+        "network_internal_dns": "192.85.168.73",
+        "id": "a3e55163-9992-46e7-b934-a3e28b66859b",
+        "network_hsr_subnet": null,
+        "network_prod_ip": "30.81.131.34",
+        "network_hsr_ip": null,
+        "cpu_socket": 2,
+        "hostname": "cqaxms4gdb",
+        "domain_name": "8144.1447.n1ecs.hp.com",
+        "cluster_name": "E4S-PRD-T70-3-Z1",
+        "network_internal_subnet": "255.255.255.0",
+        "network_name_hsr": null,
+        "network_prod_subnet": "255.255.255.0",
+        "network_name_internal": "ClientVlan-1627",
+        "hsr_vlan_id": null,
+        "encryption_state": "70721a57-4811-46a2-879e-12f555b80dc6",
+        "second_volumes": {
+        "data": {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=DATA;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "second_database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4gdata2",
+            "volume_name": "N1TRLNrvc9xYwxZeUW3nQFNQZmMc",
+            "type": "data",
+            "id": "c10b745f-d35a-4ef8-9470-efa792c63936"
+        },
+        "app": null,
+        "arch": {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=ARCHIVE;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "second_database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4garchive2",
+            "volume_name": "N1TRLNmzwPTuNcGqkPVxCmhTcbib",
+            "type": "archive",
+            "id": "bd7a4f0f-ec25-4425-bf39-4de634ccc71d"
+        },
+        "log": {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=LOG;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "second_database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4glog2",
+            "volume_name": "N1TRLNWtYWRocsd9uprRk6dQbBS7",
+            "type": "log",
+            "id": "1e7c458d-2562-4c32-b9b1-c5a26c2deb1f"
+        }
+        },
+        "network_name_prod": "ClientVlan-2427",
+        "all_app_volumes": {
+        "app": [
+            {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=APPLICATION;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "sap_solution_manager",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 40960,
+            "vg_name": "xms4gdbapp",
+            "volume_name": "N1TRLNMvktavt42TtkqqBCtNd48R",
+            "type": "application",
+            "id": "81ddef03-f3dd-4e03-b099-8691e182b431"
+            }
+        ],
+        "s4hana_app": []
+        },
+        "services": [
+        {
+            "instance_hosts": [
+            "a3e55163-9992-46e7-b934-a3e28b66859b"
+            ],
+            "role": "database",
+            "id": "7302c513-1b59-4482-afa3-dd1d1818fc11"
+        },
+        {
+            "instance_hosts": [
+            "a3e55163-9992-46e7-b934-a3e28b66859b"
+            ],
+            "role": "second_database",
+            "id": "7a0706b2-8803-4b05-9b13-846d03f34206"
+        },
+        {
+            "instance_hosts": [
+            "a3e55163-9992-46e7-b934-a3e28b66859b"
+            ],
+            "role": "sap_solution_manager",
+            "id": "9ff22c4c-48a7-463e-8239-a0b4ff79593b"
+        }
+        ],
+        "network_hsr_gateway": null,
+        "network_internal_gateway": "30.80.133.1",
+        "template_name": "5757989c-b774-4e85-97af-8d2a7e9d669c",
+        "network_internal_ip": "30.80.133.37",
+        "first_volumes": {
+        "data": {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=DATA;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4gdata1",
+            "volume_name": "N1TRLNKxJfcyHajYktjK6YpQe4T5",
+            "type": "data",
+            "id": "1354c216-154b-4343-8f77-ad220c99df69"
+        },
+        "app": {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=APPLICATION;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "sap_solution_manager",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 40960,
+            "vg_name": "xms4gdbapp",
+            "volume_name": "N1TRLNMvktavt42TtkqqBCtNd48R",
+            "type": "application",
+            "id": "81ddef03-f3dd-4e03-b099-8691e182b431"
+        },
+        "arch": {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=ARCHIVE;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4garchive1",
+            "volume_name": "N1TRLN2wEb2oEGhtjCSPkyhemfCa",
+            "type": "archive",
+            "id": "b4e80718-8dcb-4ed6-b14d-b69f0d89f6a8"
+        },
+        "log": {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=LOG;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4glog",
+            "volume_name": "N1TRLNzP7SKPA2jvutoEf4EaUoLS",
+            "type": "log",
+            "id": "88bea95d-7c4c-4a93-877b-36108ab6403f"
+        }
+        },
+        "zone": "z1",
+        "network_prod_dns": "192.85.168.73",
+        "migration_state": "92378ab2-9acc-4c29-98ac-c35593086f3e",
+        "internal_vlan_id": "1627",
+        "glance_id": "",
+        "volumes": [
+        {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=ARCHIVE;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4garchive1",
+            "volume_name": "N1TRLN2wEb2oEGhtjCSPkyhemfCa",
+            "type": "archive",
+            "id": "b4e80718-8dcb-4ed6-b14d-b69f0d89f6a8"
+        },
+        {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=ARCHIVE;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "second_database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4garchive2",
+            "volume_name": "N1TRLNmzwPTuNcGqkPVxCmhTcbib",
+            "type": "archive",
+            "id": "bd7a4f0f-ec25-4425-bf39-4de634ccc71d"
+        },
+        {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=DATA;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4gdata1",
+            "volume_name": "N1TRLNKxJfcyHajYktjK6YpQe4T5",
+            "type": "data",
+            "id": "1354c216-154b-4343-8f77-ad220c99df69"
+        },
+        {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=DATA;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "second_database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4gdata2",
+            "volume_name": "N1TRLNrvc9xYwxZeUW3nQFNQZmMc",
+            "type": "data",
+            "id": "c10b745f-d35a-4ef8-9470-efa792c63936"
+        },
+        {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=LOG;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4glog",
+            "volume_name": "N1TRLNzP7SKPA2jvutoEf4EaUoLS",
+            "type": "log",
+            "id": "88bea95d-7c4c-4a93-877b-36108ab6403f"
+        },
+        {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=LOG;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "second_database",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 1024,
+            "vg_name": "xms4glog2",
+            "volume_name": "N1TRLNWtYWRocsd9uprRk6dQbBS7",
+            "type": "log",
+            "id": "1e7c458d-2562-4c32-b9b1-c5a26c2deb1f"
+        },
+        {
+            "comment": "CUSTOMER=TestCustomer4NAT-1027;APID=S4G;HOST=cqaxms4gdb.8144.1447.n1ecs.hp.com;USE=APPLICATION;HA=N;DR=N",
+            "volume_set": "UHP_E4S",
+            "cpg_id": "839f17da-86b0-8181-1b13-34d0d66b93cf",
+            "vg_service_role": "sap_solution_manager",
+            "snap_cpg": "CPG_SSD_E4S",
+            "volume_type": "uhp",
+            "cpg": "CPG_SSD_E4S",
+            "volume_size": 40960,
+            "vg_name": "xms4gdbapp",
+            "volume_name": "N1TRLNMvktavt42TtkqqBCtNd48R",
+            "type": "application",
+            "id": "81ddef03-f3dd-4e03-b099-8691e182b431"
+        }
+        ],
+        "datastore_id": "23f0cd1b-3b1b-42b8-b097-e85f952b59e0",
+        "os_type": "linux",
+        "cpu": 4,
+        "datastore_name": "PRD-T70-3P1-Z1"
+    }
+    ],
+    "is_dr": false,
+    "sid": "S4G",
+    "services": [
+    {
+        "instance_hosts": [
+        "a3e55163-9992-46e7-b934-a3e28b66859b"
+        ],
+        "role": "database",
+        "id": "7302c513-1b59-4482-afa3-dd1d1818fc11"
+    },
+    {
+        "instance_hosts": [
+        "a3e55163-9992-46e7-b934-a3e28b66859b"
+        ],
+        "role": "second_database",
+        "id": "7a0706b2-8803-4b05-9b13-846d03f34206"
+    },
+    {
+        "instance_hosts": [
+        "a3e55163-9992-46e7-b934-a3e28b66859b"
+        ],
+        "role": "sap_solution_manager",
+        "id": "9ff22c4c-48a7-463e-8239-a0b4ff79593b"
+    }
+    ],
+    "timezone": "Europe/Berlin",
+    "ha": false,
+    "order_uuid": "c1e725a2-bc78-4f2d-bedb-f2375ed3adab",
+    "sla": "99.0",
+    "tenant": "TestCustomer4NAT-1027",
+    "customer_name": "QA Tenant"
+}

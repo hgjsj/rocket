@@ -1,0 +1,32 @@
+{
+    "name": "virtual server",
+    "version": "0.0.1",
+    "input":[
+        {
+            "name": "tenant",
+            "type": "string"
+        },
+        {
+            "name": "datacenter",
+            "type": "string"
+        }
+    ],
+    "output": {
+        "cpu": "<% $.cpu %>",
+        "ram": "<% $.ram %>"
+    },
+    "material": {
+        "cpu": {
+            "type": "integer",
+            "output": true,
+            "key": "cpu",
+            "conditions": "<% $.tenant = %>"
+        },
+        "ram": {
+            "type": "integer",
+            "output": true,
+            "key": "ram",
+            "conditions": "<% $.tenant = %>"
+        }
+    }
+}
