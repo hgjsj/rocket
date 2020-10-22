@@ -57,7 +57,12 @@ def epoll_LT(efd):
                         break
                 else:
                     break
-            efd.modify_setting(fd, select.EPOLLOUT)
+            if receive_byte:
+                efd.modify_setting(fd, select.EPOLLOUT)
+            else:
+                efd.unregister_fd(fd)
+                connections[fd].close()
+                del connections[fd]
         elif event& select.EPOLLOUT and fd in connections:
             connections[fd].send("got it message {} from {}:{}\n".format(messages[fd], connections[fd].getpeername()[0], connections[fd].getpeername()[1]).encode("utf-8"))
             efd.modify_setting(fd, select.EPOLLIN)
@@ -70,15 +75,12 @@ def epoll_ET(efd):
                 while True:
                     connection, address = efd.accept()
                     connection.setblocking(False)
-                    efd.register_fd(connection.fileno(), select.EPOLLIN | select.EPOLLET)
+                    efd.register_fd(connection.fileno(), select.EPOLLIN | select.EPOLLOUT | select.EPOLLET)
                     connections[connection.fileno()] = connection
             except socket.error:
                 pass
-        elif (event & select.EPOLLHUP or event & select.EPOLLERR) and fd in connections:
-            efd.unregister_fd(fd)
-            connections[fd].close()
-            del connections[fd]
         elif event & select.EPOLLIN and fd in connections:
+            print("is ready to read for %d" % fd)
             receive_byte = b""
             while True:
                 data = connections[fd].recv(1024)
@@ -90,11 +92,21 @@ def epoll_ET(efd):
                         break
                 else:
                     break
-            efd.modify_setting(fd, select.EPOLLOUT | select.EPOLLET)
+            if receive_byte:
+                efd.modify_setting(fd, select.EPOLLIN | select.EPOLLOUT | select.EPOLLET)
+            else:
+                efd.unregister_fd(fd)
+                connections[fd].close()
+                del connections[fd]
         elif event& select.EPOLLOUT and fd in connections:
-            connections[fd].send("got it message {} from {}:{}\n".format(messages[fd], connections[fd].getpeername()[0], connections[fd].getpeername()[1]).encode("utf-8"))
-            efd.modify_setting(fd, select.EPOLLIN | select.EPOLLET)
-
+            print("is ready to write for %d" % fd)
+            if fd in messages:
+                connections[fd].send("got it message {} from {}:{}\n".format(messages[fd], connections[fd].getpeername()[0], connections[fd].getpeername()[1]).encode("utf-8"))
+                #efd.modify_setting(fd, select.EPOLLIN | select.EPOLLET)
+        elif event & (select.EPOLLERR | select.EPOLLHUP) and fd in connections:
+            efd.unregister_fd(fd)
+            connections[fd].close()
+            del connections[fd]
             
 if __name__ == "__main__":
     s = EpollServer("0.0.0.0", 8881)
