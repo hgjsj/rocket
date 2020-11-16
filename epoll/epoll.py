@@ -1,7 +1,7 @@
 import select
 import server
 import socket
-
+import random
 EOL0 = b'\n'
 EOL1 = b'\n\n'
 EOL2 = b'\n\r\n'
@@ -76,6 +76,7 @@ def epoll_ET(efd):
                     connection, address = efd.accept()
                     connection.setblocking(False)
                     efd.register_fd(connection.fileno(), select.EPOLLIN | select.EPOLLOUT | select.EPOLLET)
+                    print(connection.getsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF))
                     connections[connection.fileno()] = connection
             except socket.error:
                 pass
@@ -107,7 +108,16 @@ def epoll_ET(efd):
             efd.unregister_fd(fd)
             connections[fd].close()
             del connections[fd]
-            
+
+
+def generate_random_str(randomlength=16):
+    random_str = ''
+    base_str = 'ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789'
+    length = len(base_str) - 1
+    for i in range(randomlength):
+        random_str += base_str[random.randint(0, length)]
+    return random_str
+
 if __name__ == "__main__":
     s = EpollServer("0.0.0.0", 8881)
     s.start_server()
