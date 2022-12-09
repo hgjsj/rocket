@@ -1,0 +1,36 @@
+{
+    "CN": "sunfuqi",
+    "hosts": [],
+    "key": {
+      "algo": "rsa",
+      "size": 2048
+    },
+    "names": [
+      {
+        "C": "CN",
+        "ST": "Wuhan",
+        "L": "Wuhan",
+        "O": "VPC",
+        "OU": "develop"
+      }
+    ]
+}
+
+{
+    "signing": {
+        "default": {
+            "expiry": "87600h"
+        },
+        "profiles": {
+            "kubernetes": {
+                "usages": [
+                    "signing",
+                    "key encipherment",
+                    "server auth",
+                    "client auth"
+                ],
+                "expiry": "87600h"
+            }
+        }
+    }
+}

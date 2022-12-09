@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resource-ops
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      app: operator
+  replicas: 1
+  template:
+    metadata:
+        labels:
+          app: operator
+    spec:
+      serviceAccount: resource-operator
+      containers:
+      - name: ingress-operator
+        image: ingress-operator:1.0.1
+      nodeSelector:
+        kubernetes.io/hostname: k8s-master

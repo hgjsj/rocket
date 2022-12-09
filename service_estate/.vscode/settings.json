@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "..\\env\\scripts\\python.exe",
+    "files.eol": "\n",
+    "python.linting.pylintArgs": ["--disable=E1101", "--disable=W,C"]
+}
