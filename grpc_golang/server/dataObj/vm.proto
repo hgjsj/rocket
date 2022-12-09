@@ -1,0 +1,39 @@
+syntax = "proto3";
+package VM;
+
+option go_package = "/server/dataObj";
+
+message Volume {
+    int32 size = 1;
+    string name = 2;
+    enum Type {
+        os = 0;
+        data = 1;
+    }
+    Type type = 3;
+}
+
+message VM {
+    int32 cpu = 1;
+    int32 memory = 2;
+    repeated Volume disks = 3;   
+}
+
+message RequestString {
+    string request = 1;
+}
+
+message ResponseString {
+    string response = 1;
+}
+
+message Empty {}
+
+service VirtualMachine{
+    rpc CreateVM(VM) returns (ResponseString){}
+    rpc DeleteVM(RequestString) returns (ResponseString){}
+}
+
+service Volumes{
+    rpc ListVolumes(Empty) returns (stream Volume) {}
+}
